@@ -8,15 +8,15 @@ const ROWS = [
 export default function Comparison() {
   return (
     <section className="compare-section">
-      <div className="section-title">Why choose QuickPoll?</div>
+      <div className="section-title">Why choose Pollify?</div>
       <p className="section-sub">
-        Traditional forms are too heavy. QuickPoll is built for speed.
+        Traditional forms are too heavy. Pollify is built for speed.
       </p>
       <div className="compare-table">
         <div className="compare-head">
           <span>Feature</span>
           <span>Traditional Forms</span>
-          <span>QuickPoll</span>
+          <span>Pollify</span>
         </div>
         {ROWS.map(({ feature, traditional, quick }) => (
           <div className="compare-row" key={feature}>

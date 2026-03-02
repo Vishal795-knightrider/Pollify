@@ -8,7 +8,7 @@ export default function Footer() {
           <span></span>
           <span></span>
         </div>
-        QuickPoll
+        Pollify
       </div>
 
       <div className="footer-links">
@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-copy">
-        © {new Date().getFullYear()} QuickPoll
+        © {new Date().getFullYear()} Pollify
       </div>
     </footer>
   )

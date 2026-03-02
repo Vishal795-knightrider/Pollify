@@ -13,7 +13,7 @@ export default function Navbar({ isDark, onToggleTheme, onCreateClick, onLogoCli
           <span />
           <span />
         </div>
-        QuickPoll
+        Pollify
       </a>
 
       <div className="nav-right">

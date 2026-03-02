@@ -21,7 +21,7 @@ export default function PollForm() {
 
   function handleSubmit() {
     const slug = Math.random().toString(36).substring(2, 10)
-    alert(`Poll created! ✅\n\n"${question}"\n\nShare link: quickpoll.app/p/${slug}`)
+    alert(`Poll created! ✅\n\n"${question}"\n\nShare link: Pollify.app/p/${slug}`)
   }
 
   return (

@@ -8,7 +8,7 @@ const FAQ_ITEMS = [
   },
   {
     id: 'free',
-    q: 'Is QuickPoll actually free?',
+    q: 'Is Pollify actually free?',
     a: 'Yes, completely free. Create unlimited polls, get unlimited votes, with no hidden fees or paywalls.',
   },
   {

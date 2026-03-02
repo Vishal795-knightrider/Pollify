@@ -7,7 +7,7 @@ export default function CTA({ onGoCreate }) {
       </h2>
       <p>
         Join thousands of teams making faster, better decisions every day
-        with QuickPoll. No friction, just results.
+        with Pollify. No friction, just results.
       </p>
       <button className="btn-create btn-create--large" onClick={onGoCreate}>
         Create your first poll →

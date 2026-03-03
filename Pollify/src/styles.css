@@ -52,7 +52,17 @@ html { scroll-behavior: smooth; }
 /* ─── Body ───────────────────────────────────────────────────────────────────── */
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(242,98,10,0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(233,30,140,0.08),
+      transparent 40%
+    ),
+    var(--bg);
   color: var(--text);
   overflow-x: hidden;
   transition: background 0.5s ease, color 0.5s ease;
@@ -103,7 +113,8 @@ nav {
   position: sticky; top: 16px; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   max-width: 900px; margin: 16px auto 0;
-  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.6);
   border-radius: 50px;
   padding: 10px 20px;
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);

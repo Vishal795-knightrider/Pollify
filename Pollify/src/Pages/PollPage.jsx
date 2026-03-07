@@ -14,6 +14,8 @@ export default function PollPage() {
 
   const [poll, setPoll] = useState(null)
   const [selected, setSelected] = useState(null)
+  const [voted, setVoted] = useState(false)
+
 
   // realtime load
   useEffect(() => {
@@ -44,7 +46,7 @@ export default function PollPage() {
   }, [id])
 
 
-  // submit vote
+
   async function submitVote() {
 
     if (selected === null) {
@@ -62,6 +64,8 @@ export default function PollPage() {
       votes: newVotes
     })
 
+    setVoted(true)
+
   }
 
 
@@ -72,6 +76,11 @@ export default function PollPage() {
         Loading...
       </h2>
     )
+
+
+
+  const total =
+    poll.votes.reduce((a, b) => a + b, 0)
 
 
 
@@ -90,8 +99,11 @@ export default function PollPage() {
 
       <h2>{poll.question}</h2>
 
+      {/* =================== */}
+      {/* BEFORE VOTE */}
+      {/* =================== */}
 
-      {poll.options.map((opt, i) => (
+      {!voted && poll.options.map((opt, i) => (
 
         <div
           key={i}
@@ -104,43 +116,113 @@ export default function PollPage() {
               selected === i
                 ? "2px solid orange"
                 : "1px solid #ccc",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: 10
+            cursor: "pointer"
           }}
         >
-
           <input
             type="radio"
             checked={selected === i}
             readOnly
           />
-
           {opt}
-
         </div>
 
       ))}
 
 
-      <button
-        onClick={submitVote}
-        style={{
-          marginTop: 20,
-          padding: "12px 20px",
-          background: "#ff7a00",
-          border: "none",
-          color: "white",
-          cursor: "pointer",
-          borderRadius: 8,
-          width: "100%",
-          fontSize: 16
-        }}
-      >
-        Submit Vote →
-      </button>
+      {!voted && (
 
+        <button
+          onClick={submitVote}
+          style={{
+            marginTop: 20,
+            padding: "12px",
+            background: "#ff7a00",
+            border: "none",
+            color: "white",
+            width: "100%",
+            borderRadius: 8
+          }}
+        >
+          Submit Vote →
+        </button>
+
+      )}
+
+
+
+      {/* =================== */}
+      {/* AFTER VOTE */}
+      {/* =================== */}
+
+      {voted && poll.options.map((opt, i) => {
+
+        const percent =
+          total === 0
+            ? 0
+            : Math.round(
+                (poll.votes[i] / total) * 100
+              )
+
+        return (
+
+          <div
+            key={i}
+            style={{
+              margin: "12px 0",
+              textAlign: "left"
+            }}
+          >
+
+            <div>
+              {opt} — {percent}%
+            </div>
+
+            <div
+              style={{
+                height: 10,
+                background: "#ddd",
+                borderRadius: 5,
+                overflow: "hidden"
+              }}
+            >
+              <div
+                style={{
+                  width: percent + "%",
+                  background: "#ff7a00",
+                  height: "100%"
+                }}
+              />
+            </div>
+
+          </div>
+
+        )
+
+      })}
+
+
+      {voted && (
+
+        <div style={{ marginTop: 20 }}>
+
+          Total votes: {total}
+
+          <br /><br />
+
+          <button
+            onClick={() =>
+              navigator.clipboard.writeText(
+                window.location.href
+              )
+            }
+          >
+            Copy Link
+          </button>
+
+        </div>
+
+      )}
 
     </div>
 

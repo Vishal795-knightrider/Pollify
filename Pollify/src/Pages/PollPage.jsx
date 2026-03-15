@@ -85,7 +85,7 @@ export default function PollPage() {
 
     <>
 
-      {/* ✅ NAVBAR */}
+      {/* NAVBAR */}
 
       <Navbar
         isDark={false}
@@ -96,117 +96,169 @@ export default function PollPage() {
 
       <div className="poll-page">
 
-        <h2 className="poll-title">
-          {poll.question}
-        </h2>
+        <div className="poll-card">
 
 
+          {/* header */}
 
-        {/* BEFORE VOTE */}
+          <div className="poll-header">
 
-        {!voted && poll.options.map((opt, i) => (
+            <div className="live-badge">
+              LIVE RESULTS
+            </div>
 
-          <div
-            key={i}
-            className={
-              selected === i
-                ? "poll-option selected"
-                : "poll-option"
-            }
-            onClick={() => setSelected(i)}
-          >
-
-            <input
-              type="radio"
-              checked={selected === i}
-              readOnly
-            />
-
-            {opt}
+            <div className="total-votes-top">
+              {total} TOTAL VOTES
+            </div>
 
           </div>
 
-        ))}
+
+
+          {/* title */}
+
+          <h2 className="poll-title">
+            {poll.question}
+          </h2>
 
 
 
-        {!voted && (
+          {/* BEFORE VOTE */}
 
-          <button
-            className="vote-btn"
-            onClick={submitVote}
-          >
-            Submit Vote →
-          </button>
-
-        )}
-
-
-
-        {/* AFTER VOTE */}
-
-        {voted && poll.options.map((opt, i) => {
-
-          const percent =
-            total === 0
-              ? 0
-              : Math.round(
-                  (poll.votes[i] / total) * 100
-                )
-
-          return (
+          {!voted && poll.options.map((opt, i) => (
 
             <div
               key={i}
-              className="result-row"
+              className={
+                selected === i
+                  ? "poll-option selected"
+                  : "poll-option"
+              }
+              onClick={() => setSelected(i)}
             >
 
-              <div className="result-label">
-                <span>{opt}</span>
-                <span>{percent}%</span>
-              </div>
+              <input
+                type="radio"
+                checked={selected === i}
+                readOnly
+              />
 
-              <div className="result-bar">
-
-                <div
-                  className="result-fill"
-                  style={{
-                    width: percent + "%"
-                  }}
-                />
-
-              </div>
+              {opt}
 
             </div>
 
-          )
-
-        })}
+          ))}
 
 
 
-        {voted && (
-
-          <div className="total-votes">
-
-            Total votes: {total}
-
-            <br />
+          {!voted && (
 
             <button
-              className="copy-btn"
-              onClick={() =>
-                navigator.clipboard.writeText(
-                  window.location.href
-                )
-              }
+              className="vote-btn"
+              onClick={submitVote}
             >
-              Copy Link
+              Submit Vote →
             </button>
 
-          </div>
+          )}
 
-        )}
+
+
+          {/* AFTER VOTE */}
+
+          {voted && poll.options.map((opt, i) => {
+
+            const percent =
+              total === 0
+                ? 0
+                : Math.round(
+                    (poll.votes[i] / total) * 100
+                  )
+
+            return (
+
+              <div
+                key={i}
+                className="result-row"
+              >
+
+                <div className="result-label">
+
+                  <span>{opt}</span>
+
+                  <span>{percent}%</span>
+
+                </div>
+
+
+                <div className="result-bar">
+
+                  <div
+                    className="result-fill"
+                    style={{
+                      width: percent + "%"
+                    }}
+                  />
+
+                </div>
+
+              </div>
+
+            )
+
+          })}
+
+
+
+          {/* SHARE */}
+
+          {voted && (
+
+            <div className="share-box">
+
+              <button
+                className="copy-btn"
+                onClick={() =>
+                  navigator.clipboard.writeText(
+                    window.location.href
+                  )
+                }
+              >
+                Copy Link
+              </button>
+
+
+              <button
+                className="share-btn"
+                onClick={() =>
+                  window.open(
+                    "https://twitter.com/intent/tweet?url=" +
+                    window.location.href
+                  )
+                }
+              >
+                Twitter
+              </button>
+
+
+              <button
+                className="share-btn"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/?text=" +
+                    window.location.href
+                  )
+                }
+              >
+                WhatsApp
+              </button>
+
+            </div>
+
+          )}
+
+
+        </div>
 
       </div>
 

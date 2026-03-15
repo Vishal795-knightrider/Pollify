@@ -491,3 +491,116 @@ footer {
   .compare-table { overflow-x: auto; }
   footer { flex-direction: column; gap: 20px; text-align: center; }
 }
+
+
+/* ===================== */
+/* POLL PAGE */
+/* ===================== */
+
+.poll-page {
+  max-width: 600px;
+  margin: 80px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* title */
+
+.poll-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* option box */
+
+.poll-option {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.poll-option:hover {
+  border-color: orange;
+}
+
+.poll-option.selected {
+  border: 2px solid #ff7a00;
+  background: #fff7f0;
+}
+
+
+/* button */
+
+.vote-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.vote-btn:hover {
+  background: #ff6a00;
+}
+
+
+/* RESULT */
+
+.result-row {
+  margin: 14px 0;
+}
+
+.result-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.result-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.result-fill {
+  height: 100%;
+  background: #ff7a00;
+}
+
+
+/* total */
+
+.total-votes {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+/* copy button */
+
+.copy-btn {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: black;
+}

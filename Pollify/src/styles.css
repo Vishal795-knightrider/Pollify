@@ -604,3 +604,149 @@ footer {
 .copy-btn:hover {
   background: black;
 }
+
+
+
+/* ===================== */
+/* POLL CARD */
+/* ===================== */
+
+.poll-page {
+  max-width: 640px;
+  margin: 90px auto;
+}
+
+.poll-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* gradient top */
+
+.poll-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    orange,
+    #ff3b8d
+  );
+}
+
+/* header */
+
+.poll-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.live-badge {
+  background: #fff3e8;
+  color: #ff7a00;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.total-votes-top {
+  font-size: 12px;
+  color: #888;
+}
+
+/* title */
+
+.poll-title {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+
+/* option */
+
+.poll-option {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.poll-option.selected {
+  border: 2px solid #ff7a00;
+  background: #fff7f0;
+}
+
+
+/* vote btn */
+
+.vote-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #ff7a00;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* result */
+
+.result-row {
+  margin: 12px 0;
+}
+
+.result-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.result-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.result-fill {
+  height: 100%;
+  background: #ff7a00;
+  border-radius: 10px;
+}
+
+
+/* share */
+
+.share-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.copy-btn {
+  background: #0f172a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+}
+
+.share-btn {
+  padding: 10px;
+  margin: 4px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}

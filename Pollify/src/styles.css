@@ -616,7 +616,7 @@ footer {
   margin: 90px auto;
 }
 
-.poll-card {
+.poll-result-card{
   background: white;
   border-radius: 18px;
   padding: 28px;
@@ -627,7 +627,7 @@ footer {
 
 /* gradient top */
 
-.poll-card::before {
+.poll-result-card::before {
   content: "";
   position: absolute;
   top: 0;

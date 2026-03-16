@@ -96,7 +96,7 @@ export default function PollPage() {
 
       <div className="poll-page">
 
-        <div className="poll-card">
+        <div className="poll-result-card">
 
 
           {/* header */}

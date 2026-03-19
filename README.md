@@ -11,9 +11,6 @@
 
 <br>
 
-🌐 **Live Demo**  
-https://pollify-e197f.web.app
-
 </div>
 
 ---

@@ -690,50 +690,39 @@ footer {
 
 
 
-/* ================= FOOTER FINAL FIX ================= */
+/* ================= MODERN FOOTER ================= */
+/* ===== FOOTER ===== */
 
 .footer {
 
-  margin-top: 80px;
+  padding: 60px 0;
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+/* box */
+
+.footer-box {
+
+  width: 900px;
 
   background: #0f1929;
 
-  color: white;
+  border-radius: 20px;
 
-  width: 100%;
-
-}
-
-
-/* gradient line */
-
-.footer-top-line {
-
-  height: 4px;
-
-  background: linear-gradient(
-    90deg,
-    #ff7a00,
-    #ff3b8d,
-    #4f46e5
-  );
-
-}
-
-
-/* main row */
-
-.footer-content {
-
-  width: 100%;
-
-  padding: 30px 60px;
+  padding: 25px 40px;
 
   display: flex;
 
   justify-content: space-between;
 
   align-items: center;
+
+  color: white;
 
 }
 
@@ -744,9 +733,11 @@ footer {
 
   display: flex;
 
-  flex-direction: column;
+  align-items: center;
 
-  align-items: flex-start;
+  gap: 8px;
+
+  font-weight: 700;
 
 }
 
@@ -768,8 +759,9 @@ footer {
 
   text-decoration: none;
 
-}
+  transition: 0.3s;
 
+}
 
 .footer-center a:hover {
 
@@ -782,47 +774,14 @@ footer {
 
 .footer-right {
 
-  display: flex;
+  color: #aaa;
 
-  gap: 15px;
-
-}
-
-
-.footer-right a {
-
-  color: white;
-
-  font-size: 20px;
-
-  transition: 0.3s;
+  font-size: 14px;
 
 }
 
 
-.footer-right a:hover {
-
-  color: orange;
-
-  transform: scale(1.2);
-
-}
-
-
-/* logo */
-
-.footer-logo {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  font-weight: 700;
-
-}
-
+/* LOGO */
 
 .logo-bars span {
 

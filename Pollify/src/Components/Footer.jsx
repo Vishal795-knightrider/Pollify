@@ -4,6 +4,7 @@ export default function Footer() {
 
       <div className="footer-box">
 
+        {/* LEFT */}
         <div className="footer-left">
 
           <span className="logo-bars">
@@ -20,6 +21,7 @@ export default function Footer() {
         </div>
 
 
+        {/* CENTER */}
         <div className="footer-center">
 
           <a href="#">Twitter</a>
@@ -38,6 +40,7 @@ export default function Footer() {
         </div>
 
 
+        {/* RIGHT */}
         <div className="footer-right">
 
           © 2026 Pollify

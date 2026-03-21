@@ -6,6 +6,8 @@ export default function Footer() {
 
       <div className="footer-content">
 
+        {/* LEFT */}
+
         <div className="footer-left">
 
           <div className="footer-logo">
@@ -26,6 +28,8 @@ export default function Footer() {
         </div>
 
 
+        {/* CENTER */}
+
         <div className="footer-center">
 
           <a href="#">Privacy</a>
@@ -34,6 +38,8 @@ export default function Footer() {
 
         </div>
 
+
+        {/* RIGHT */}
 
         <div className="footer-right">
 

@@ -690,20 +690,13 @@ footer {
 
 
 
-
-/* ================= PREMIUM FOOTER ================= */
-
 .footer {
 
   margin-top: 80px;
 
-  background: rgba(15,25,41,0.95);
-
-  backdrop-filter: blur(10px);
+  background: #0f1929;
 
   color: white;
-
-  position: relative;
 
 }
 
@@ -724,15 +717,13 @@ footer {
 }
 
 
-/* content */
-
 .footer-content {
 
-  max-width: 900px;
+  max-width: 1100px;
 
   margin: auto;
 
-  padding: 30px;
+  padding: 30px 40px;
 
   display: flex;
 
@@ -743,7 +734,16 @@ footer {
 }
 
 
-/* logo */
+/* LEFT */
+
+.footer-left {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
 
 .footer-logo {
 
@@ -755,10 +755,66 @@ footer {
 
   font-weight: 700;
 
-  font-size: 18px;
+}
+
+
+/* CENTER */
+
+.footer-center {
+
+  display: flex;
+
+  gap: 20px;
 
 }
 
+
+.footer-center a {
+
+  color: #aaa;
+
+  text-decoration: none;
+
+}
+
+.footer-center a:hover {
+
+  color: white;
+
+}
+
+
+/* RIGHT */
+
+.footer-right {
+
+  display: flex;
+
+  gap: 15px;
+
+}
+
+
+.footer-right a {
+
+  color: white;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+
+}
+
+.footer-right a:hover {
+
+  color: orange;
+
+  transform: scale(1.2);
+
+}
+
+
+/* bars */
 
 .logo-bars span {
 
@@ -769,8 +825,6 @@ footer {
   margin-right: 2px;
 
   border-radius: 2px;
-
-  transition: 0.3s;
 
 }
 
@@ -792,87 +846,4 @@ footer {
 .logo-bars span:nth-child(4) {
   height: 12px;
   background: green;
-}
-
-
-.footer-logo:hover span {
-
-  transform: scale(1.2);
-
-}
-
-
-/* center links */
-
-.footer-center a {
-
-  margin: 0 14px;
-
-  color: #aaa;
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  transition: 0.3s;
-
-}
-
-.footer-center a:hover {
-
-  color: white;
-
-  transform: translateY(-2px);
-
-}
-
-
-/* icons */
-
-.footer-right a {
-
-  color: white;
-
-  font-size: 20px;
-
-  margin-left: 16px;
-
-  transition: 0.3s;
-
-}
-
-.footer-right a:hover {
-
-  color: #ff7a00;
-
-  transform: scale(1.2) rotate(5deg);
-
-}
-
-
-/* copy */
-
-.footer-copy {
-
-  font-size: 12px;
-
-  color: #aaa;
-
-}
-
-
-/* responsive */
-
-@media (max-width: 700px) {
-
-  .footer-content {
-
-    flex-direction: column;
-
-    gap: 20px;
-
-    text-align: center;
-
-  }
-
 }

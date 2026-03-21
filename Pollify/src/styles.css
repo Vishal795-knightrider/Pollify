@@ -690,6 +690,8 @@ footer {
 
 
 
+/* ================= FOOTER FINAL FIX ================= */
+
 .footer {
 
   margin-top: 80px;
@@ -697,6 +699,8 @@ footer {
   background: #0f1929;
 
   color: white;
+
+  width: 100%;
 
 }
 
@@ -717,13 +721,13 @@ footer {
 }
 
 
+/* main row */
+
 .footer-content {
 
-  max-width: 1100px;
+  width: 100%;
 
-  margin: auto;
-
-  padding: 30px 40px;
+  padding: 30px 60px;
 
   display: flex;
 
@@ -742,18 +746,7 @@ footer {
 
   flex-direction: column;
 
-}
-
-
-.footer-logo {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  font-weight: 700;
+  align-items: flex-start;
 
 }
 
@@ -764,7 +757,7 @@ footer {
 
   display: flex;
 
-  gap: 20px;
+  gap: 25px;
 
 }
 
@@ -776,6 +769,7 @@ footer {
   text-decoration: none;
 
 }
+
 
 .footer-center a:hover {
 
@@ -805,6 +799,7 @@ footer {
 
 }
 
+
 .footer-right a:hover {
 
   color: orange;
@@ -814,7 +809,20 @@ footer {
 }
 
 
-/* bars */
+/* logo */
+
+.footer-logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-weight: 700;
+
+}
+
 
 .logo-bars span {
 

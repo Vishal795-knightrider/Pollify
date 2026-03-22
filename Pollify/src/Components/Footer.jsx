@@ -40,7 +40,6 @@ const SOCIAL_LINKS = [
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
         <path d="M7 18c-1.1 0-2 .9-2 2h14a2 2 0 0 0-2-2H7zM20 7h-1V5H5v8a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-1h1a2 2 0 0 0 0-4zm-3 5a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V7h10v5zm3-2h-1V9h1a.5.5 0 0 1 0 1z"/>
-        <path d="M9.5 3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
       </svg>
     ),
   },
@@ -68,31 +67,27 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
 
+        {/* LEFT — brand */}
         <div className="footer-brand-block">
-          <div className="footer-logo-row">
-            <div className="logo-icon">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <span className="footer-brand-name">Pollify</span>
+          <div className="logo-icon">
+            <span />
+            <span />
+            <span />
+            <span />
           </div>
-          <p className="footer-tagline">No logins. No friction. Just results.</p>
+          <span className="footer-brand-name">Pollify</span>
         </div>
 
-        <div className="footer-social-block">
-          <p className="footer-social-label">Find us online</p>
-          <div className="footer-social-row">
-            {SOCIAL_LINKS.map(({ key, href, label, color, icon }) => (
-              <SocialLink key={key} href={href} label={label} color={color} icon={icon} />
-            ))}
-          </div>
+        {/* CENTER — social icons */}
+        <div className="footer-social-row">
+          {SOCIAL_LINKS.map(({ key, href, label, color, icon }) => (
+            <SocialLink key={key} href={href} label={label} color={color} icon={icon} />
+          ))}
         </div>
 
+        {/* RIGHT — copyright */}
         <div className="footer-copy-block">
-          <span>© 2026 Pollify.</span>
-          <span className="footer-copy-sub">Built with ♥ — No tracking, no ads.</span>
+          © 2026 Pollify
         </div>
 
       </div>

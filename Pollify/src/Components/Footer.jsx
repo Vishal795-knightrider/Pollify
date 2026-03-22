@@ -67,15 +67,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
 
-        {/* LEFT — brand */}
-        <div className="footer-brand-block">
-          <div className="logo-icon">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-          <span className="footer-brand-name">Pollify</span>
+        {/* LEFT — copyright */}
+        <div className="footer-copy-block">
+          © 2026 Pollify
         </div>
 
         {/* CENTER — social icons */}
@@ -85,9 +79,15 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* RIGHT — copyright */}
-        <div className="footer-copy-block">
-          © 2026 Pollify
+        {/* RIGHT — brand */}
+        <div className="footer-brand-block">
+          <div className="logo-icon">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <span className="footer-brand-name">Pollify</span>
         </div>
 
       </div>

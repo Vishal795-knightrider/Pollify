@@ -1,20 +1,35 @@
 export default function CTA({ onGoCreate }) {
   return (
-    <div className="cta-block">
-      <h2>
-        Ready to start<br />
-        <span>polling?</span>
-      </h2>
-      <p>
-        Join thousands of teams making faster, better decisions every day
-        with Pollify. No friction, just results.
-      </p>
-      <button className="btn-create btn-create--large" onClick={onGoCreate}>
-        Create your first poll →
-      </button>
-      <div className="cta-perks">
-        <span>No Login Required</span>
-        <span>Unlimited Free Polls</span>
+    <div className="summer-cta-container">
+      <div className="summer-cta-card">
+        <span className="summer-tag coral" style={{ marginBottom: "18px" }}>
+          ✦ Ready In 10 Seconds
+        </span>
+
+        <h2 className="cta-heading">
+          Ready to ask your <em>community?</em>
+        </h2>
+
+        <p className="cta-desc">
+          Gather honest opinions on dinner spots, design directions, or team decisions in seconds.
+          No credit card, no sign-up wall, just answers.
+        </p>
+
+        <button className="btn-summer-primary" style={{ padding: "14px 34px", fontSize: "1.06rem" }} onClick={onGoCreate}>
+          <span>Create your first poll →</span>
+        </button>
+
+        <div className="cta-perk-row">
+          <span className="cta-perk-pill">
+            <span>🌸</span> No Login Required
+          </span>
+          <span className="cta-perk-pill">
+            <span>✨</span> Unlimited Free Polls
+          </span>
+          <span className="cta-perk-pill">
+            <span>⚡</span> Real-time Firestore Sync
+          </span>
+        </div>
       </div>
     </div>
   )

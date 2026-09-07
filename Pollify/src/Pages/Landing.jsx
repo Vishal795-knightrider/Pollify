@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import Navbar from "../Components/Navbar.jsx"
 import Hero from "../Components/Hero.jsx"
+import StatsSection from "../Components/StatsSection.jsx"
+import ExplorePolls from "../Components/ExplorePolls.jsx"
 import Preview from "../Components/Preview.jsx"
 import Steps from "../Components/Steps.jsx"
 import Features from "../Components/Features.jsx"
@@ -24,13 +26,18 @@ export default function Landing({ isDark, onThemeToggle }) {
         onCreateClick={goToCreate}
       />
 
-      <Hero onGoCreate={goToCreate} />
-      <Preview />
-      <Steps />
-      <Features />
-      <Comparison />
-      <FAQ />
-      <CTA onGoCreate={goToCreate} />
+      <main>
+        <Hero onGoCreate={goToCreate} />
+        <StatsSection />
+        <ExplorePolls onGoCreate={goToCreate} />
+        <Preview />
+        <Steps />
+        <Features />
+        <Comparison />
+        <FAQ />
+        <CTA onGoCreate={goToCreate} />
+      </main>
+
       <Footer />
     </div>
   )

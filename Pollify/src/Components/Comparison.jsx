@@ -1,28 +1,35 @@
 const ROWS = [
-  { feature: 'Creation Time',     traditional: '~2–5 minutes',         quick: '~10 seconds'       },
-  { feature: 'User Friction',     traditional: 'Login/Email Required',  quick: 'No Login Required' },
-  { feature: 'Visual Appeal',     traditional: 'Generic / Busy',        quick: 'Minimal & Premium' },
-  { feature: 'Mobile Experience', traditional: 'Often Clunky',          quick: 'Mobile-Optimized'  },
+  { feature: "Creation Time", traditional: "~3–5 minutes of setup", pollify: "~10 seconds flat ⚡" },
+  { feature: "Voter Friction", traditional: "Mandatory logins & emails", pollify: "Zero friction, tap & vote 🌸" },
+  { feature: "Visual Identity", traditional: "Sterile grey spreadsheet", pollify: "Warm summer editorial card ✨" },
+  { feature: "Live Results", traditional: "Manual dashboard refresh", pollify: "Real-time animated bars 📊" },
+  { feature: "Mobile Flow", traditional: "Tiny cramped inputs", pollify: "Touch-first responsive delight 📱" },
 ]
 
 export default function Comparison() {
   return (
-    <section className="compare-section">
-      <div className="section-title">Why choose Pollify?</div>
-      <p className="section-sub">
-        Traditional forms are too heavy. Pollify is built for speed.
-      </p>
-      <div className="compare-table">
-        <div className="compare-head">
-          <span>Feature</span>
+    <section className="editorial-section">
+      <div className="section-header-editorial">
+        <span className="section-kicker">Side-By-Side</span>
+        <h2 className="section-heading-lg">
+          Why people choose <em>Pollify</em>
+        </h2>
+        <p className="section-subtext">
+          Traditional survey forms feel like doing taxes. Pollify feels like writing a postcard.
+        </p>
+      </div>
+
+      <div className="editorial-comparison-card">
+        <div className="comparison-table-head">
+          <span>Dimension</span>
           <span>Traditional Forms</span>
-          <span>Pollify</span>
+          <span>Pollify Summer 2.0</span>
         </div>
-        {ROWS.map(({ feature, traditional, quick }) => (
-          <div className="compare-row" key={feature}>
+        {ROWS.map(({ feature, traditional, pollify }) => (
+          <div className="comparison-table-row" key={feature}>
             <span>{feature}</span>
             <span>{traditional}</span>
-            <span>{quick}</span>
+            <span>{pollify}</span>
           </div>
         ))}
       </div>

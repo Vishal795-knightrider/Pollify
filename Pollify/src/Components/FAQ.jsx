@@ -3,50 +3,30 @@ import { useState } from 'react'
 const FAQ_ITEMS = [
   {
     id: 'account',
-    q: 'Do I really not need an account to create a poll?',
-    a: 'Correct. We believe in zero friction. You can create, share, and manage your polls without ever giving us your email or creating a password.',
+    q: 'Do I really not need an account to create or vote on a poll?',
+    a: 'Absolutely not. We believe in zero friction. You can create, share, and vote on polls without ever typing an email or creating a password.',
   },
   {
     id: 'free',
-    q: 'Is Pollify actually free?',
-    a: 'Yes, completely free. Create unlimited polls, get unlimited votes, with no hidden fees or paywalls.',
+    q: 'Is Pollify completely free?',
+    a: 'Yes, 100% free. Create unlimited polls, collect unlimited votes, and share your links anywhere with no hidden limits or paywalls.',
   },
   {
     id: 'results',
-    q: 'How do I see the results of my poll?',
-    a: 'After creating your poll you get a creator link to view live results. Results update in real-time as votes come in.',
+    q: 'How do live results work?',
+    a: 'Pollify uses Firebase Firestore real-time listeners. As soon as a voter selects an option and submits, all open screens instantly recalculate percentages and animate the progress bars.',
   },
   {
     id: 'anonymous',
-    q: 'Are the votes anonymous?',
-    a: "Yes. We don't collect any personal information from voters. No IP tracking, no cookies—just clean, anonymous votes.",
+    q: 'Are voter choices anonymous?',
+    a: 'Yes. We do not store personal profiles, emails, or track private identities. Only clean vote tallies are updated.',
   },
   {
-    id: 'limit',
-    q: 'Can I limit people to one vote each?',
-    a: 'Yes. When creating your poll, you can enable vote limiting. We use session-based tracking to prevent duplicate votes without requiring a login.',
+    id: 'multiselect',
+    q: 'Can voters select multiple choices?',
+    a: 'Yes! When creating your poll, simply toggle the "Multiple Selection" switch on your stationery card.',
   },
 ]
-
-function FaqItem({ item, isOpen, onToggle }) {
-  return (
-    <div className="faq-item">
-      <button
-        className={isOpen ? 'faq-q open' : 'faq-q'}
-        onClick={onToggle}
-        aria-expanded={isOpen}
-      >
-        {item.q}
-        <span className={isOpen ? 'faq-toggle' : 'faq-toggle closed'}>
-          {isOpen ? '−' : '+'}
-        </span>
-      </button>
-      <div className={isOpen ? 'faq-a open' : 'faq-a'}>
-        <p>{item.a}</p>
-      </div>
-    </div>
-  )
-}
 
 export default function FAQ() {
   const [openId, setOpenId] = useState('account')
@@ -56,25 +36,42 @@ export default function FAQ() {
   }
 
   return (
-    <section>
-      <div className="faq-title-block">
-        <div className="section-label">Common Questions</div>
-        <div className="section-title">
-          Frequently Asked<br />
-          <span className="section-title-accent">Questions</span>
-        </div>
+    <section id="faqs" className="editorial-section">
+      <div className="section-header-editorial">
+        <span className="section-kicker">Helpful Answers</span>
+        <h2 className="section-heading-lg">
+          Frequently asked <em>questions</em>
+        </h2>
+        <p className="section-subtext">
+          Everything you wanted to know about how Pollify keeps things light, fast, and simple.
+        </p>
       </div>
-      {FAQ_ITEMS.map(item => (
-        <FaqItem
-          key={item.id}
-          item={item}
-          isOpen={openId === item.id}
-          onToggle={() => handleToggle(item.id)}
-        />
-      ))}
-      <p className="still-q">
-        Still have questions? <a href="#">Get in touch with us</a>
-      </p>
+
+      <div className="faq-accordion-container">
+        {FAQ_ITEMS.map(item => {
+          const isOpen = openId === item.id
+          return (
+            <div
+              className={`stationery-faq-item ${isOpen ? 'is-open' : ''}`}
+              key={item.id}
+            >
+              <button
+                className="stationery-faq-btn"
+                onClick={() => handleToggle(item.id)}
+                aria-expanded={isOpen}
+              >
+                <span>{item.q}</span>
+                <span className="faq-icon-round" aria-hidden="true">
+                  {isOpen ? '−' : '+'}
+                </span>
+              </button>
+              <div className="faq-answer-pane">
+                <p>{item.a}</p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
     </section>
   )
 }

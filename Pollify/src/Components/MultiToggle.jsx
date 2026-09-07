@@ -1,13 +1,13 @@
 export default function MultiToggle({ checked, onChange }) {
   return (
-    <div className="toggle-row">
-      <div className="toggle-info">
+    <div className="multi-toggle-box">
+      <div className="toggle-text-block">
         <h5>Multiple Selection</h5>
-        <p>Allow users to choose more than one answer</p>
+        <p>Allow voters to select more than one choice</p>
       </div>
-      <label className="toggle-switch">
+      <label className="summer-switch" aria-label="Toggle multiple selection">
         <input type="checkbox" checked={checked} onChange={onChange} />
-        <span className="slider" />
+        <span className="summer-slider" />
       </label>
     </div>
   )

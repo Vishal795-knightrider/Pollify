@@ -29,7 +29,6 @@ export default function Hero({ onGoCreate }) {
       <div className="hero-content">
         <div className="hero-tag-wrap">
           <span className="summer-tag coral">
-            <span className="hero-sparkle">✦</span>
             Fresh & Frictionless Polling
           </span>
           <span className="summer-tag butter">Zero Signups Required</span>
@@ -62,10 +61,10 @@ export default function Hero({ onGoCreate }) {
 
         <div className="hero-proof">
           <div className="avatar-stack" aria-hidden="true">
-            <div className="mini-avatar av-1">☀️</div>
-            <div className="mini-avatar av-2">🍓</div>
-            <div className="mini-avatar av-3">🎨</div>
-            <div className="mini-avatar av-4">🌻</div>
+            <div className="mini-avatar av-1">A</div>
+            <div className="mini-avatar av-2">R</div>
+            <div className="mini-avatar av-3">S</div>
+            <div className="mini-avatar av-4">M</div>
           </div>
           <p className="proof-text">
             <strong>12,400+ instant votes</strong> cast today with zero friction.
@@ -91,11 +90,11 @@ export default function Hero({ onGoCreate }) {
 
           {/* Floating Summer Stickers */}
           <div className="floating-badge badge-top-right">
-            <span>✨ Hot Take</span>
+            <span>Hot Take</span>
           </div>
 
           <div className="floating-badge badge-bottom-left">
-            <span>🍓 Picnic Debate</span>
+            <span>Picnic Debate</span>
           </div>
 
           {/* Main Summer Stationery Poll Card */}
@@ -123,7 +122,7 @@ export default function Hero({ onGoCreate }) {
                 tabIndex={0}
               >
                 <div className="mock-label-group">
-                  <span>Fresh sourdough & salted butter 🥖</span>
+                  <span>Fresh sourdough & salted butter</span>
                   <span className="mock-pct">{heroVotes[0]}%</span>
                 </div>
                 <div className="mock-bar-bg">
@@ -138,7 +137,7 @@ export default function Hero({ onGoCreate }) {
                 tabIndex={0}
               >
                 <div className="mock-label-group">
-                  <span>Iced peach spritz with mint 🍑</span>
+                  <span>Iced peach spritz with mint</span>
                   <span className="mock-pct">{heroVotes[1]}%</span>
                 </div>
                 <div className="mock-bar-bg">
@@ -149,7 +148,7 @@ export default function Hero({ onGoCreate }) {
 
             <div className="card-footer-meta">
               <span className="card-total-votes">
-                👥 892 community votes
+                892 community votes
               </span>
               <span className="card-action-cue">
                 Click option to test ↗

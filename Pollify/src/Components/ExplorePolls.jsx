@@ -3,22 +3,22 @@ import { useNavigate } from "react-router-dom"
 
 const EXPLORE_CATEGORIES = [
   "All",
-  "Weekend Vibes ☀️",
-  "Design & Aesthetics 🎨",
-  "Food & Picnic 🍓",
-  "Daily Debates ☕"
+  "Weekend Vibes",
+  "Design & Aesthetics",
+  "Food & Dining",
+  "Daily Debates"
 ]
 
 const SAMPLE_POLLS = [
   {
     id: "exp-1",
-    category: "Design & Aesthetics 🎨",
+    category: "Design & Aesthetics",
     categoryClass: "peach",
     question: "Should our brand redesign keep editorial serif typography or go full brutalist?",
     totalVotes: 1420,
     created: "2 hours ago",
     span: "card-span-8 card-tilt-left",
-    tag: "Trending Today 🔥",
+    tag: "Trending Today",
     options: [
       { text: "Editorial serif — timeless & warm", pct: 68, votes: 965 },
       { text: "Minimal neo-grotesque sans", pct: 24, votes: 341 },
@@ -27,13 +27,13 @@ const SAMPLE_POLLS = [
   },
   {
     id: "exp-2",
-    category: "Food & Picnic 🍓",
+    category: "Food & Dining",
     categoryClass: "butter",
     question: "The ultimate summer afternoon treat?",
     totalVotes: 890,
     created: "4 hours ago",
     span: "card-span-4 card-tilt-right",
-    tag: "Community Pick 🌸",
+    tag: "Community Pick",
     options: [
       { text: "Cold brew with vanilla sweet cream", pct: 54, votes: 480 },
       { text: "Iced matcha latte with oat milk", pct: 46, votes: 410 }
@@ -41,13 +41,13 @@ const SAMPLE_POLLS = [
   },
   {
     id: "exp-3",
-    category: "Daily Debates ☕",
+    category: "Daily Debates",
     categoryClass: "sage",
     question: "Camera on or camera off for morning casual syncs?",
     totalVotes: 3240,
     created: "Yesterday",
     span: "card-span-4 card-tilt-left",
-    tag: "Hot Debate ⚡",
+    tag: "Popular Debate",
     options: [
       { text: "Camera off, let me sip tea in peace", pct: 72, votes: 2332 },
       { text: "Camera on, love seeing faces", pct: 28, votes: 908 }
@@ -55,13 +55,13 @@ const SAMPLE_POLLS = [
   },
   {
     id: "exp-4",
-    category: "Weekend Vibes ☀️",
+    category: "Weekend Vibes",
     categoryClass: "coral",
     question: "Saturday morning plan of choice: Sleep in till noon or catch early sunlight at a local farmers market?",
     totalVotes: 2110,
     created: "1 day ago",
     span: "card-span-8 card-tilt-right",
-    tag: "Weekend Vibe 🌻",
+    tag: "Weekend Choice",
     options: [
       { text: "Farmers market pastries & sunlight walk", pct: 61, votes: 1287 },
       { text: "Cozy bed, blackout curtains, zero alarms", pct: 39, votes: 823 }
@@ -181,7 +181,7 @@ export default function ExplorePolls({ onGoCreate }) {
               </div>
 
               <div className="poll-card-bottom">
-                <span>👥 {poll.totalVotes.toLocaleString()} votes • {poll.created}</span>
+                <span>{poll.totalVotes.toLocaleString()} votes • {poll.created}</span>
                 <button
                   className="btn-vote-trigger"
                   onClick={onGoCreate}

@@ -52,7 +52,7 @@ export default function PollForm() {
         }
       )
 
-      // ✅ direct open poll page
+      // Direct navigation to poll page
       navigate(`/poll/${docRef.id}`)
     } catch (error) {
       console.error("Error creating poll:", error)
@@ -108,12 +108,18 @@ export default function PollForm() {
                     border: "none",
                     color: "var(--text-soft)",
                     cursor: "pointer",
-                    fontSize: "1.1rem",
-                    padding: "4px"
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "6px"
                   }}
                   title="Remove option"
+                  aria-label="Remove option"
                 >
-                  ✕
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
                 </button>
               )}
             </div>
@@ -136,7 +142,7 @@ export default function PollForm() {
         disabled={!isValid || isSubmitting}
         onClick={handleSubmit}
       >
-        {isSubmitting ? "Creating your poll card..." : "Publish Summer Poll 🌸"}
+        {isSubmitting ? "Creating your poll..." : "Publish Poll"}
       </button>
     </div>
   )

@@ -3,7 +3,7 @@ export default function CTA({ onGoCreate }) {
     <div className="summer-cta-container">
       <div className="summer-cta-card">
         <span className="summer-tag coral" style={{ marginBottom: "18px" }}>
-          ✦ Ready In 10 Seconds
+          Ready in seconds
         </span>
 
         <h2 className="cta-heading">
@@ -21,13 +21,13 @@ export default function CTA({ onGoCreate }) {
 
         <div className="cta-perk-row">
           <span className="cta-perk-pill">
-            <span>🌸</span> No Login Required
+            No Login Required
           </span>
           <span className="cta-perk-pill">
-            <span>✨</span> Unlimited Free Polls
+            Unlimited Free Polls
           </span>
           <span className="cta-perk-pill">
-            <span>⚡</span> Real-time Firestore Sync
+            Real-time Firestore Sync
           </span>
         </div>
       </div>

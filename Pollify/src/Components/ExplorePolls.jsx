@@ -166,8 +166,13 @@ export default function ExplorePolls({ onGoCreate }) {
                         title="Click to select this answer"
                       >
                         <div className="poll-bar-meta">
-                          <span>
-                            {isSelected ? "✓ " : ""}{opt.text}
+                          <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                            {isSelected && (
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                              </svg>
+                            )}
+                            {opt.text}
                           </span>
                           <span className="poll-bar-pct">{opt.pct}%</span>
                         </div>
@@ -186,7 +191,7 @@ export default function ExplorePolls({ onGoCreate }) {
                   className="btn-vote-trigger"
                   onClick={onGoCreate}
                 >
-                  Create Similar ↗
+                  Create Similar
                 </button>
               </div>
             </article>

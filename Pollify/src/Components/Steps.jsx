@@ -4,21 +4,21 @@ const STEPS = [
     sealClass: "seal-1",
     title: "Write your question",
     body: "Type your query and options. Add as many choices as you want. Zero signup walls or settings bloat.",
-    accent: "🌸 ~10 seconds"
+    accent: "Ready in seconds"
   },
   {
     num: "2",
     sealClass: "seal-2",
     title: "Share your stationery link",
     body: "Send your beautiful unique link into WhatsApp, Twitter, Slack, or group chats. Friends vote with a single tap.",
-    accent: "💌 1-click share"
+    accent: "Direct share link"
   },
   {
     num: "3",
     sealClass: "seal-3",
     title: "Watch live results bloom",
     body: "See the animated infographic percentages shift in real-time as votes come pouring in without page reloads.",
-    accent: "✨ Instant realtime"
+    accent: "Live real-time updates"
   },
 ]
 

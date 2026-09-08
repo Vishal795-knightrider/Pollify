@@ -130,7 +130,7 @@ export default function PollPage({ isDark, onThemeToggle }) {
             </span>
 
             <span className="summer-tag butter">
-              👥 {total} Total Votes
+              {total} Total Votes
             </span>
           </div>
 
@@ -155,8 +155,7 @@ export default function PollPage({ isDark, onThemeToggle }) {
               fontSize: "0.92rem",
               animation: "floatBubble 1.5s ease"
             }}>
-              <span>🌸 ✨</span>
-              <span>Thank you! Your vote has bloomed into the live tally.</span>
+              <span>Thank you! Your vote has been recorded in the live tally.</span>
             </div>
           )}
 
@@ -219,7 +218,7 @@ export default function PollPage({ isDark, onThemeToggle }) {
                           <span>{opt}</span>
                           {isLeader && (
                             <span className="winner-badge-pill">
-                              👑 Summer Favorite
+                              Leading Option
                             </span>
                           )}
                         </div>
@@ -247,7 +246,7 @@ export default function PollPage({ isDark, onThemeToggle }) {
               {/* Share Box */}
               <div className="share-stationery-box">
                 <span className="share-label-title">
-                  💌 Share this poll with your circle:
+                  Share this poll:
                 </span>
 
                 <div className="share-actions-group">
@@ -256,7 +255,7 @@ export default function PollPage({ isDark, onThemeToggle }) {
                     className="btn-share-pill btn-copy"
                     onClick={handleCopyLink}
                   >
-                    <span>{copied ? "✓ Copied Link!" : "Copy Link"}</span>
+                    <span>{copied ? "Copied Link!" : "Copy Link"}</span>
                   </button>
 
                   <button

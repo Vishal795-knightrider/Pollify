@@ -151,7 +151,7 @@ export default function Hero({ onGoCreate }) {
                 892 community votes
               </span>
               <span className="card-action-cue">
-                Click option to test ↗
+                Click option to test
               </span>
             </div>
           </div>

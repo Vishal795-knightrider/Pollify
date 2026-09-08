@@ -831,9 +831,9 @@ body.dark-mode .mock-bar-bg {
   margin-bottom: 12px;
 }
 .section-kicker::before, .section-kicker::after {
-  content: '✦';
-  font-size: 0.7rem;
-  opacity: 0.6;
+  content: '—';
+  font-size: 0.75rem;
+  opacity: 0.5;
 }
 
 .section-heading-lg {
@@ -1246,61 +1246,118 @@ body.dark-mode .poll-track {
   line-height: 1.6;
 }
 
-/* ─── Comparison Scorecard ───────────────────────────────────────────────── */
-.editorial-comparison-card {
-  background: var(--surface-raised);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-  max-width: 900px;
+/* ─── Editorial Difference Ledger (Original Comparison) ─────────────────── */
+.editorial-diff-ledger {
+  max-width: 880px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-.comparison-table-head {
+
+.diff-ledger-item {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  padding: 20px 32px;
-  background: var(--surface-alt);
-  border-bottom: 1.5px solid var(--border);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-soft);
-}
-.comparison-table-head span:last-child {
-  color: var(--coral);
-}
-.comparison-table-row {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  padding: 20px 32px;
+  grid-template-columns: 180px 1fr;
+  gap: 36px;
+  padding: 26px 20px;
   border-bottom: 1px solid var(--border);
   align-items: center;
-  transition: background 0.15s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  position: relative;
 }
-.comparison-table-row:last-child {
-  border-bottom: none;
+
+.diff-ledger-item:first-child {
+  border-top: 1px solid var(--border);
 }
-.comparison-table-row:hover {
+
+.diff-ledger-item.diff-item-tinted {
   background: var(--surface-alt);
+  border-radius: var(--radius-md);
+  border-color: transparent;
+  padding: 26px 24px;
+  margin: 8px 0;
+  box-shadow: var(--shadow-sm);
 }
-.comparison-table-row span:first-child {
+
+.diff-topic-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.diff-number {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
   font-weight: 700;
-  color: var(--text);
-  font-size: 0.95rem;
-}
-.comparison-table-row span:nth-child(2) {
-  color: var(--text-soft);
-  font-size: 0.92rem;
-}
-.comparison-table-row span:last-child {
   color: var(--coral);
-  font-weight: 700;
-  font-size: 0.95rem;
-  display: inline-flex;
+  letter-spacing: 0.06em;
+}
+
+.diff-topic-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.diff-columns-group {
+  display: grid;
+  grid-template-columns: 1fr auto 1.15fr;
+  gap: 22px;
   align-items: center;
+}
+
+.diff-col {
+  display: flex;
+  flex-direction: column;
   gap: 6px;
+}
+
+.diff-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.diff-traditional .diff-label {
+  color: var(--text-soft);
+}
+
+.diff-traditional .diff-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.diff-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+
+.diff-connector-line {
+  display: block;
+  width: 1px;
+  height: 42px;
+  background: var(--border-strong);
+  opacity: 0.6;
+}
+
+.diff-pollify {
+  padding-left: 4px;
+}
+
+.diff-pollify .diff-label {
+  color: var(--coral);
+}
+
+.diff-pollify .diff-desc {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 /* ─── FAQ Accordion (Summer Stationery) ──────────────────────────────────── */
@@ -1584,7 +1641,9 @@ body.dark-mode .summer-cta-card {
   color: var(--text-muted);
 }
 .studio-note-widget li::before {
-  content: '🌸 ';
+  content: '— ';
+  color: var(--coral);
+  font-weight: 700;
 }
 
 /* Create Right: Physical Summer Stationery Card Form */
@@ -2134,10 +2193,27 @@ body.dark-mode .result-progress-track {
   .stats-banner {
     grid-template-columns: 1fr;
   }
-  .comparison-table-head, .comparison-table-row {
-    grid-template-columns: 1.2fr 1fr 1fr;
-    padding: 16px;
-    font-size: 0.82rem;
+  .diff-ledger-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px 14px;
+  }
+  .diff-topic-block {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .diff-columns-group {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .diff-connector {
+    display: none;
+  }
+  .diff-pollify {
+    padding-left: 0;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
   }
   .share-stationery-box {
     flex-direction: column;

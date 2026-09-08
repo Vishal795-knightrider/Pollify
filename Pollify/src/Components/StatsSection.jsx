@@ -21,20 +21,20 @@ export default function StatsSection() {
         </div>
 
         <div className="stat-box">
-          <span className="stat-label">Avg Decision Time</span>
+          <span className="stat-label">Avg Response Time</span>
           <span className="stat-number">12s</span>
           <span className="stat-trend">
-            <span style={{ color: "var(--coral)" }}>⚡ Instant</span>
-            <span style={{ color: "var(--text-soft)" }}>zero friction</span>
+            <span style={{ color: "var(--coral)" }}>Real-time</span>
+            <span style={{ color: "var(--text-soft)" }}>immediate sync</span>
           </span>
         </div>
 
         <div className="stat-box">
-          <span className="stat-label">Participation Rate</span>
-          <span className="stat-number">98.6%</span>
+          <span className="stat-label">Voter Accessibility</span>
+          <span className="stat-number">100%</span>
           <span className="stat-trend">
-            <span>🌸 5x higher</span>
-            <span style={{ color: "var(--text-soft)" }}>than legacy forms</span>
+            <span style={{ color: "var(--sage-deep)" }}>No signups</span>
+            <span style={{ color: "var(--text-soft)" }}>direct one-tap voting</span>
           </span>
         </div>
       </div>

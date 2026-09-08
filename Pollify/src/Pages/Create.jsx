@@ -16,7 +16,7 @@ export default function Create({ isDark, onThemeToggle, onGoLanding, onGoCreate 
         {/* Left Column: Expressive Visual Editorial Heading & Supporting Stationery */}
         <div className="create-left-studio">
           <span className="summer-tag coral" style={{ marginBottom: "20px" }}>
-            ✦ Studio Mode
+            Studio Mode
           </span>
 
           <h1 className="create-studio-heading">
@@ -30,7 +30,7 @@ export default function Create({ isDark, onThemeToggle, onGoLanding, onGoCreate 
 
           <div className="studio-note-widget">
             <div className="note-header">
-              <span>🌻 Creator Tips</span>
+              <span>Creator Tips</span>
             </div>
             <ul>
               <li>Keep questions punchy and conversational</li>

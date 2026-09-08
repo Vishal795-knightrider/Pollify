@@ -15,7 +15,7 @@ export default function Preview() {
         {/* Card 1: Team Check-in */}
         <div className="editorial-poll-card card-span-4 card-tilt-left">
           <div className="poll-card-top">
-            <span className="summer-tag sage">Team Culture 🌿</span>
+            <span className="summer-tag sage">Team Culture</span>
             <span className="live-indicator">
               <span className="live-pulse" />
               Active
@@ -29,7 +29,7 @@ export default function Preview() {
           <div className="poll-card-options">
             <div className="poll-option-bar leading-winner">
               <div className="poll-bar-meta">
-                <span>Outdoor sun picnic 🧺</span>
+                <span>Outdoor sun picnic</span>
                 <span className="poll-bar-pct">74%</span>
               </div>
               <div className="poll-track">
@@ -39,7 +39,7 @@ export default function Preview() {
 
             <div className="poll-option-bar">
               <div className="poll-bar-meta">
-                <span>Rooftop matcha 🍵</span>
+                <span>Rooftop matcha</span>
                 <span className="poll-bar-pct">26%</span>
               </div>
               <div className="poll-track">
@@ -49,15 +49,15 @@ export default function Preview() {
           </div>
 
           <div className="poll-card-bottom">
-            <span>👥 48 votes • Design Team</span>
-            <span style={{ color: "var(--sage-deep)", fontWeight: "700" }}>✓ Decided</span>
+            <span>48 votes • Design Team</span>
+            <span style={{ color: "var(--sage-deep)", fontWeight: "700" }}>Decided</span>
           </div>
         </div>
 
         {/* Card 2: Product Launch Decision */}
         <div className="editorial-poll-card card-span-4">
           <div className="poll-card-top">
-            <span className="summer-tag coral">Feature Launch 🚀</span>
+            <span className="summer-tag coral">Feature Launch</span>
             <span className="live-indicator">
               <span className="live-pulse" />
               Live
@@ -71,7 +71,7 @@ export default function Preview() {
           <div className="poll-card-options">
             <div className="poll-option-bar leading-winner">
               <div className="poll-bar-meta">
-                <span>Ship it immediately! 🌸</span>
+                <span>Ship it immediately</span>
                 <span className="poll-bar-pct">82%</span>
               </div>
               <div className="poll-track">
@@ -91,7 +91,7 @@ export default function Preview() {
           </div>
 
           <div className="poll-card-bottom">
-            <span>👥 1,480 votes • Community</span>
+            <span>1,480 votes • Community</span>
             <span style={{ color: "var(--coral)", fontWeight: "700" }}>Voting now</span>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function Preview() {
         {/* Card 3: Creative aesthetic question */}
         <div className="editorial-poll-card card-span-4 card-tilt-right">
           <div className="poll-card-top">
-            <span className="summer-tag butter">Book Club 📖</span>
+            <span className="summer-tag butter">Book Club</span>
             <span className="live-indicator">
               <span className="live-pulse" />
               Active
@@ -113,7 +113,7 @@ export default function Preview() {
           <div className="poll-card-options">
             <div className="poll-option-bar leading-winner">
               <div className="poll-bar-meta">
-                <span>Slice-of-life café novel ☕</span>
+                <span>Slice-of-life café novel</span>
                 <span className="poll-bar-pct">63%</span>
               </div>
               <div className="poll-track">
@@ -123,7 +123,7 @@ export default function Preview() {
 
             <div className="poll-option-bar">
               <div className="poll-bar-meta">
-                <span>Cozy countryside mystery 🔍</span>
+                <span>Cozy countryside mystery</span>
                 <span className="poll-bar-pct">37%</span>
               </div>
               <div className="poll-track">
@@ -133,7 +133,7 @@ export default function Preview() {
           </div>
 
           <div className="poll-card-bottom">
-            <span>👥 210 votes • Bookworm Guild</span>
+            <span>210 votes • Bookworm Guild</span>
             <span style={{ color: "var(--butter-tag)", fontWeight: "700" }}>3 hrs left</span>
           </div>
         </div>

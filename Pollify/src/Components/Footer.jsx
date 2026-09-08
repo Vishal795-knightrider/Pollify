@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div>
-            © {new Date().getFullYear()} Pollify — Summer Picnic Editorial Edition. All rights reserved.
+            &copy; {new Date().getFullYear()} Pollify. All rights reserved.
           </div>
 
           <div className="footer-links-row">

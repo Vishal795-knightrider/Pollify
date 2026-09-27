@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 const EXPLORE_CATEGORIES = [
   "All",
@@ -70,7 +69,6 @@ const SAMPLE_POLLS = [
 ]
 
 export default function ExplorePolls({ onGoCreate }) {
-  const navigate = useNavigate()
   const [activeCategory, setActiveCategory] = useState("All")
   const [searchQuery, setSearchQuery] = useState("")
   const [userVotedState, setUserVotedState] = useState({})
